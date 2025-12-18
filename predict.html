@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% block title %}Predict House Price{% endblock %} {%
+block content %}
+<h1>Predict House Price</h1>
+
+<form action="/predict" method="post">
+  <input
+    type="number"
+    step="any"
+    name="longitude"
+    placeholder="Longitude"
+    required
+  />
+  <input
+    type="number"
+    step="any"
+    name="latitude"
+    placeholder="Latitude"
+    required
+  />
+  <input
+    type="number"
+    name="housing_median_age"
+    placeholder="House Age"
+    required
+  />
+  <input type="number" name="total_rooms" placeholder="Total Rooms" required />
+  <input
+    type="number"
+    name="total_bedrooms"
+    placeholder="Total Bedrooms"
+    required
+  />
+  <input type="number" name="population" placeholder="Population" required />
+  <input type="number" name="households" placeholder="Households" required />
+  <input
+    type="number"
+    step="any"
+    name="median_income"
+    placeholder="Median Income"
+    required
+  />
+
+  <select name="ocean_proximity" required>
+    <option value="INLAND">INLAND</option>
+    <option value="NEAR OCEAN">NEAR OCEAN</option>
+    <option value="NEAR BAY">NEAR BAY</option>
+    <option value="ISLAND">ISLAND</option>
+  </select>
+
+  <button type="submit">Predict</button>
+</form>
+{% endblock %}

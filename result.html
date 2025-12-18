@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prediction Result</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h2>🏠 House Price Predictor</h2>
+      <a href="/">Home</a>
+    </nav>
+
+    <div class="result-box">
+      <h1>Predicted House Price</h1>
+      <h2>₹ {{ prediction }}</h2>
+
+      <a href="/" class="btn">Predict Again</a>
+    </div>
+  </body>
+</html>

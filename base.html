@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}House Price Predictor{% endblock %}</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+
+  <body class="{% block body_class %}{% endblock %}">
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">🏠 House Price Predictor</div>
+      <div class="menu">
+        <a href="/">Home</a>
+        <a href="/predict">Prediction</a>
+        <a href="/about">About</a>
+        <a href="/feedback">Feedback</a>
+      </div>
+    </nav>
+
+    <!-- PAGE CONTENT -->
+    <div class="content">{% block content %}{% endblock %}</div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 House Price Predictor | ML Project</p>
+    </footer>
+  </body>
+</html>

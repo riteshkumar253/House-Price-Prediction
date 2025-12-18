@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% block title %}About | House Price Predictor{%
+endblock %} {% block content %}
+<div class="about-container">
+  <h1>About This Project</h1>
+
+  <img
+    src="{{ url_for('static', filename='images/lucid-origin_a_serene_two-story_house_with_a_sloping_roof_and_large_windows_stands_near_the_o-0.jpg') }}"
+    class="about-image"
+    alt="House Image"
+  />
+
+  <p class="intro">
+    The <strong>House Price Predictor</strong> is a Machine Learning based web
+    application that estimates house prices using real housing data.
+  </p>
+
+  <div class="card">
+    <h2>🎯 Objective</h2>
+    <p>Provide fair and data-driven house price estimates.</p>
+  </div>
+
+  <div class="card">
+    <h2>⚙️ How It Works</h2>
+    <ul>
+      <li>User enters house details</li>
+      <li>Data is preprocessed</li>
+      <li>ML model predicts price</li>
+      <li>Result shown instantly</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🧠 Technologies</h2>
+    <ul>
+      <li>Python</li>
+      <li>Flask</li>
+      <li>Scikit-learn</li>
+      <li>Pandas & NumPy</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
